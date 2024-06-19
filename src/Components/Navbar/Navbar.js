@@ -10,11 +10,14 @@ export const Navbar = () => {
           <p className="logo">freaky's</p>
         </Link>
         <div>
-          <input></input>
+          <input type="text" placeholder="search"></input>
         </div>
       </div>
       <div className="bottomNav">
         <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/shop">Shop</Link>
           </li>

@@ -2,8 +2,8 @@ import React from "react";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { Home } from "./Components/Home/Home";
 import { Shop } from "./Components/Shop/Shop";
-import { Newsteller } from './Components/Newsteller/Newsteller';
-import { Club } from './Components/Club/Club';
+import { Newsteller } from "./Components/Newsteller/Newsteller";
+import { Club } from "./Components/Club/Club";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
