@@ -4,7 +4,8 @@ import './Home.css';
 export const Home = () => {
   return (
     <div className="homeBckg">
-
+    <div className="recommendation">
+    </div>
     </div>
   )
 };

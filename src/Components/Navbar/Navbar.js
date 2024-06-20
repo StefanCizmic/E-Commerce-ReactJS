@@ -5,7 +5,7 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <nav>
-      <div className="upperNav">
+        <div className="upperNav">
         <Link to="/">
           <p className="logo">freaky's</p>
         </Link>

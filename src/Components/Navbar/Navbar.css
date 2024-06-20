@@ -5,8 +5,8 @@ nav {
   height: 90px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  background-color: #faf9f6;
-  border-bottom: 2.5px solid #1b2328;
+  /* background-color: #faf9f6; */
+  background-color: #fff;
 }
 
 .upperNav,
@@ -24,6 +24,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #292929;
 }
 
 .bottomNav ul {
@@ -38,20 +39,20 @@ nav {
 }
 
 .bottomNav a:hover {
-  color: #fb6f92;
+  color: #f89b1d;
   text-decoration: underline;
 }
 
 .upperNav a,
 .bottomNav a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .logo {
   font-family: "Knewave", system-ui;
   font-size: 30px;
-  color: #fb6f92;
+  color: #292929;
 }
 
 .upperNav input {
