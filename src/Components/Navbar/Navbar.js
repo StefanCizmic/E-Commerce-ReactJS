@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; 
+import "./Navbar.css";
 
 export const Navbar = () => {
-  
-  const [stickyClass, setStickyClass] = useState ('relative');
+  const [stickyClass, setStickyClass] = useState("relative");
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      window.scrollY > 45 ? setStickyClass('fixed') : setStickyClass('relative');
+    window.addEventListener("scroll", () => {
+      window.scrollY > 45
+        ? setStickyClass("fixed")
+        : setStickyClass("relative");
     });
   }, []);
 

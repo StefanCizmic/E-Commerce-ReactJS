@@ -1,0 +1,44 @@
+.recommended {
+  background-color: #f89b1d;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 1200px; /* Povećano za tri slajda */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel__content {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__item {
+  min-width: 25%; /* Trećina širine karusela */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+/* .carousel__slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+ */
+
+.carousel__img {
+  width: 100%;
+}
+
+.carousel__img img {
+  width: 85%;
+}
+
+.carousel__img:hover {
+  cursor: pointer;
+}
