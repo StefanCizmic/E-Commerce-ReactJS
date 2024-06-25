@@ -5,7 +5,7 @@ import four from  '../Images/Recommended/Four.webp'
 import five from  '../Images/Recommended/Five.webp'
 
 
-export const topFive = [
+export const topSellers = [
     {
       id: 1,
       image: `${one}`, 

@@ -1,12 +1,19 @@
-.recommended {
+.topSellers {
   background-color: #f89b1d;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.topFive {
+.top {
   width: 90%;
+}
+
+.topHeading {
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 18px;
+  color: #fff;
 }
 
 .topRecords {
@@ -16,14 +23,18 @@
   gap: 30px;
 }
 
-.topFiveItem {
+.topItem {
   width: 220px;
   height: 280px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
-.topFiveItem:hover {
+.topItem:hover {
   cursor: pointer;
+}
+
+.topItem:hover .topFiveImg {
+  transform: rotateY(360deg);
 }
 
 .topFiveImg img {
@@ -32,14 +43,11 @@
 }
 
 .topFiveImg {
-  transition: transform 1s;
+  transition: transform 1.2s;
   transform-style: preserve-3d;
-}
-
-.topFiveItem:hover .topFiveImg {
-  transform: rotateY(360deg);
 }
 
 .topFiveData {
   text-align: center;
 }
+

@@ -1,14 +1,15 @@
 import React from "react";
-import { topFive } from "../../../Util/topFive";
-import "./TopFive.css";
+import { topSellers } from "../../../Util/topSellers";
+import "./TopSellers.css";
 
-export const TopFive = () => {
+export const TopSellers = () => {
   return (
-    <div className="recommended">
-        <div className="topFive">
+    <div className="topSellers">
+      <div className="top">
+        <p className="topHeading">Top Sellers!</p>
         <div className="topRecords">
-          {topFive.map((item) => (
-            <div className="topFiveItem" key={item.id}>
+          {topSellers.map((item) => (
+            <div className="topItem" key={item.id}>
               <div className="topFiveImg">
                 <img src={item.image} alt={item.title} />
               </div>

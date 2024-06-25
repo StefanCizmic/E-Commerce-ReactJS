@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
+    <div className="bckg">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/newsteller" element={<Newsteller />}></Route>
         <Route path="/club" element={<Club />}></Route>
       </Routes>
-    </>
+    </div>
   );
 };
 
