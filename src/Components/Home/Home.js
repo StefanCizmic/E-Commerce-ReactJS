@@ -1,11 +1,11 @@
 import React from "react";
-import { Recommended } from "./Recommended/Recommended";
+import { TopFive } from "./TopFive/TopFive";
 import './Home.css';
 
 export const Home = () => {
   return (
     <div className="home">
-    <Recommended />
+    <TopFive />
 
     </div>
   )
