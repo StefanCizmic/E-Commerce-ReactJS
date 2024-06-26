@@ -1,8 +1,8 @@
-import one from  '../Images/Recommended/One.webp'
-import two from  '../Images/Recommended/Two.webp'
-import three from  '../Images/Recommended/Three.webp'
-import four from  '../Images/Recommended/Four.webp'
-import five from  '../Images/Recommended/Five.webp'
+import one from  '../Images/Top Sellers/One.webp'
+import two from  '../Images/Top Sellers/Two.webp'
+import three from  '../Images/Top Sellers/Three.webp'
+import four from  '../Images/Top Sellers/Four.webp'
+import five from  '../Images/Top Sellers/Five.webp'
 
 
 export const topSellers = [

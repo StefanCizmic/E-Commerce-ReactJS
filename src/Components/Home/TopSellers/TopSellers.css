@@ -1,5 +1,5 @@
 .topSellers {
-  background-color: #f89b1d;
+  background-color: var(--color-orange);
   display: flex;
   justify-content: center;
   align-items: center;

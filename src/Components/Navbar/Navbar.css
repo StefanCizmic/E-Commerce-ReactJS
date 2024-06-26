@@ -21,7 +21,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #292929;
+  background-color: var(--color-black);
 }
 
 .relative {
@@ -47,7 +47,7 @@ nav {
 }
 
 .bottomNav a:hover {
-  color: #f89b1d;
+  color: var(--color-orange);
   text-decoration: underline;
 }
 
@@ -60,7 +60,7 @@ nav {
 .logo {
   font-family: "Knewave", system-ui;
   font-size: 30px;
-  color: #292929;
+  color: var(--color-black);
 }
 
 .upperNav input {
