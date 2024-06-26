@@ -1,0 +1,13 @@
+
+.new {
+    display: flex;
+    justify-content: center;
+}
+
+.new h1 {
+    font-family: "Knewave", system-ui; 
+    font-size: 120px;
+    font-weight: 100;
+    color: #292929;
+}
+
