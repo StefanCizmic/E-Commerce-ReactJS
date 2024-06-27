@@ -1,7 +1,7 @@
 import React from "react";
 import { TopSellers } from "./TopSellers/TopSellers";
 import { WhatsNew } from "./WhatsNew/WhatsNew";
-import { Suggested } from "./Suggested/Suggested";
+import { SuggestedTwenty } from "./SuggestedTwenty/SuggestedTwenty";
 import "./Home.css";
 
 export const Home = () => {
@@ -9,7 +9,7 @@ export const Home = () => {
     <div className="home">
       <TopSellers />
       <WhatsNew />
-      <Suggested />
+      <SuggestedTwenty />
     </div>
   );
 };

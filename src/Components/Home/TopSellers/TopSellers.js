@@ -1,5 +1,5 @@
 import React from "react";
-import { topSellers } from "../../../Util/topSellers";
+import { records } from "../../../Util/records";
 import "./TopSellers.css";
 
 export const TopSellers = () => {
@@ -8,14 +8,14 @@ export const TopSellers = () => {
       <div className="top">
         <p className="topHeading">Top Sellers!</p>
         <div className="topRecords">
-          {topSellers.map((item) => (
+          {records.topSellers.map((item) => (
             <div className="topItem" key={item.id}>
               <div className="topFiveImg">
                 <img src={item.image} alt={item.title} />
               </div>
               <div className="topFiveData">
                 <h2>{item.title}</h2>
-                <p>{item.author}</p>
+                <p>{item.artist}</p>
               </div>
             </div>
           ))}

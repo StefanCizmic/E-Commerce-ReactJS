@@ -1,14 +1,18 @@
 
-.new {
+.whatsNew {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.new h1 {
+.whatsNew h1 {
     font-family: "Knewave", system-ui; 
     font-size: 120px;
     font-weight: 100;
     color: var(--color-black);
 }
 
+.whatsNew span {
+    border: 10px solid var(--color-black);
+    border-radius: 50%;
+}
