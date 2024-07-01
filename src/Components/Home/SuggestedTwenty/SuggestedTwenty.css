@@ -49,6 +49,26 @@
   cursor: pointer;
 }
 
+.singleRecordImg {
+  position: relative;
+}
+
+.singleRecordImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.singleRecordImg:hover::before {
+  opacity: 1;
+}
+
 .singleRecordImg img {
   width: 100%;
   height: 100%;

@@ -2,18 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Knewave&display=swap");
 
 :root {
-    --color-black: #292929;
-    --color-orange: #f89b1d;
-    --color-white: #f5f5dc;
-  }
-
+  --color-black: #292929;
+  --color-orange: #f89b1d;
+  --color-white: #f5f5dc;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .bckg {
-        background-color: var(--color-white);
+  background-color: var(--color-white);
+}
+
+.app {
+  padding: 0px 45px;
 }

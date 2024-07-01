@@ -6,6 +6,7 @@ export const TopSellers = () => {
   return (
     <div className="topSellers">
       <div className="top">
+        <button className="buttonCtrlLeft"></button>
         <p className="topHeading">Top Sellers!</p>
         <div className="topRecords">
           {records.topSellers.map((item) => (
@@ -20,6 +21,7 @@ export const TopSellers = () => {
             </div>
           ))}
         </div>
+        <button className="buttonCtrlRight"></button>
       </div>
     </div>
   );
