@@ -1,8 +1,16 @@
-import React from "react";
-import { records } from "../../../Util/records";
+import React, { useEffect, useState } from "react";
+import { getRecords } from "../../../Util/Fetch/getRecords";
 import "./SuggestedTwenty.css";
 
 export const SuggestedTwenty = () => {
+  const [suggestedTwenty, setSuggestedTwenty] = useState([]);
+  useEffect(() => {
+    const fetchSuggestedTwenty = async () => {
+      const data = await getRecords("suggestedTwenty");
+      setSuggestedTwenty(data);
+    };
+    fetchSuggestedTwenty();
+  }, []);
   return (
     <div className="suggested">
       <div className="suggestedInner">
@@ -18,7 +26,7 @@ export const SuggestedTwenty = () => {
           </div>
         </div>
         <div className="suggestedRecords">
-          {records.suggestedTwenty.map((item) => (
+          {suggestedTwenty.map((item) => (
             <div className="singleRecord" key={item.id}>
               <div className="singleRecordImg">
                 <img src={item.image} />
