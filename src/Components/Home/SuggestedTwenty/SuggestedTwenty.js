@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { getRecords } from "../../../Util/Fetch/getRecords";
+import { CardSkeleton } from '../../CardSkeleton/CardSkeleton';
 import "./SuggestedTwenty.css";
 
 export const SuggestedTwenty = () => {
   const [suggestedTwenty, setSuggestedTwenty] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchSuggestedTwenty = async () => {
       const data = await getRecords("suggestedTwenty");
       setSuggestedTwenty(data);
+      setIsLoading(false);
     };
     fetchSuggestedTwenty();
   }, []);
@@ -26,7 +29,7 @@ export const SuggestedTwenty = () => {
           </div>
         </div>
         <div className="suggestedRecords">
-          {suggestedTwenty.map((item) => (
+          {isLoading ? <CardSkeleton cards={20}/> : suggestedTwenty?.map((item) => (
             <div className="singleRecord" key={item.id}>
               <div className="singleRecordImg">
                 <img src={item.image} />

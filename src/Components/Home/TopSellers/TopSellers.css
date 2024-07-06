@@ -19,11 +19,14 @@
 .topRecords {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .topItem {
   width: 220px;
   height: 280px;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -46,48 +49,6 @@
 }
 
 .topFiveData {
+  margin-top: 5px;
   text-align: center;
-}
-
-.buttonCtrlLeft,
-.buttonCtrlRight {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.buttonCtrlLeft {
-  left: 60px;
-}
-
-.buttonCtrlRight {
-  right: 60px;
-}
-
-.buttonCtrlLeft::before,
-.buttonCtrlRight::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.buttonCtrlLeft::before {
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #000 transparent transparent;
-  left: 10px;
-  top: 10px;
-}
-
-.buttonCtrlRight::before {
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #000;
-  right: 10px;
-  top: 10px;
 }
