@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { getRecords } from "../../../Util/Fetch/getRecords";
-import { CardSkeleton } from '../../CardSkeleton/CardSkeleton';
+import { CardSkeleton } from "../../CardSkeleton/CardSkeleton";
 import "./SuggestedTwenty.css";
 
 export const SuggestedTwenty = () => {
   const [suggestedTwenty, setSuggestedTwenty] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fetchSuggestedTwenty = async () => {
       const data = await getRecords("suggestedTwenty");
@@ -14,6 +15,7 @@ export const SuggestedTwenty = () => {
     };
     fetchSuggestedTwenty();
   }, []);
+
   return (
     <div className="suggested">
       <div className="suggestedInner">
@@ -29,17 +31,21 @@ export const SuggestedTwenty = () => {
           </div>
         </div>
         <div className="suggestedRecords">
-          {isLoading ? <CardSkeleton cards={20}/> : suggestedTwenty?.map((item) => (
-            <div className="singleRecord" key={item.id}>
-              <div className="singleRecordImg">
-                <img src={item.image} />
+          {isLoading ? (
+            <CardSkeleton cards={20} />
+          ) : (
+            suggestedTwenty?.map((item) => (
+              <div className="singleRecord" key={item.id}>
+                <div className="singleRecordImg" data-content={item.price}>
+                  <img src={item.image} alt={item.title} />
+                </div>
+                <div className="singleRecordText">
+                  <h4>{item.title}</h4>
+                  <p>{item.artist}</p>
+                </div>
               </div>
-              <div className="singleRecordText">
-                <h4>{item.title}</h4>
-                <p>{item.artist}</p>
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </div>
