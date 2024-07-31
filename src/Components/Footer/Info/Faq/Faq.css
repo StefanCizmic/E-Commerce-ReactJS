@@ -1,0 +1,13 @@
+.faq {
+  height: 80vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.faqs {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.faqItem:hover {
+  cursor: pointer;
+}
