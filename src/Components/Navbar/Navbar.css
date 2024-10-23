@@ -1,38 +1,77 @@
-
 nav {
-  height: 90px;
+  height: 130px;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 0.6fr;
 }
 
 .upperNav,
 .bottomNav {
   padding: 0px 50px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
 }
 
-.upperNav {
+.upperNav > div {
+  flex: 1;
+}
+
+.search-cont span {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.search-cont .search-icon {
+  margin-right: 5px;
+}
+
+.search-cont input {
+  width: 200px;
+  font-family: "Playfair Display", serif;
+  border: 0px;
+  outline: 0px;
+}
+
+.search-cont button {
+  margin-left: 4px;
+  background-color: var(--buttons-color);
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  color: #fff;
+  padding: 4px 24px;
+  border: 0px;
+  border-radius: 4px;
+  transition: background-color 0.13s ease-in;
+}
+
+.search-cont button:hover {
+  cursor: pointer;
+  background-color: var(--color-green);
+}
+
+.upperNav .store-name {
+  font-size: 20px;
+  font-weight: 450;
+  text-align: center;
+}
+
+.user-cart-cont {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
+  justify-content: end;
+  gap: 15px;
+}
+
+.user-cart-cont span {
+  color: var(--color-black);
+  transition: color 0.13s ease-in;
+}
+
+.user-cart-cont span:hover {
+  cursor: pointer;
+  color: var(--color-green);
 }
 
 .bottomNav {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: var(--color-black);
-}
-
-.relative {
-  position: relative;
-}
-
-.fixed {
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  width: 100%;
 }
 
 .bottomNav ul {
@@ -41,36 +80,17 @@ nav {
 }
 
 .bottomNav ul li {
-  margin: 10px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
-}
-
-.bottomNav a:hover {
-  color: var(--color-orange);
-  text-decoration: underline;
+  margin: 13px;
+  font-size: 14px;
 }
 
 .upperNav a,
 .bottomNav a {
   text-decoration: none;
-  color: #fff;
-}
-
-.logo {
-  font-family: "Knewave", system-ui;
-  font-size: 30px;
   color: var(--color-black);
+  transition: color 0.13s ease-in;
 }
 
-.upperNav input {
-  width: 220px;
-  height: 22px;
-  border: 0.5px solid black;
-  box-shadow: 2px 1px 0px 1.5px, 0px -1px 0px 1.5px rgba(0, 0, 0, 0.62);
-  outline: none;
-  transform: skew(-3deg, 0.5deg);
-  font-family: "Roboto Condensed", sans-serif;
-  padding-left: 5px;
+.bottomNav a:hover {
+  color: var(--color-green);
 }
-

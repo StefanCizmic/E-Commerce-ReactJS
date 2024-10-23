@@ -27,13 +27,13 @@ export const faq = [
     id: 5,
     question: "What is your return policy?",
     answer:
-      "We offer a 30-day return policy. If you are not satisfied with your purchase, you can return the item within 30 days of delivery for a full refund or exchange. The item must be in its original condition and packaging. For detailed instructions on how to return an item, please visit our [Return Policy](link to return policy)page.",
+      "We offer a 30-day return policy. If you are not satisfied with your purchase, you can return the item within 30 days of delivery for a full refund or exchange. The item must be in its original condition and packaging. For detailed instructions on how to return an item, please visit our Return Policy page.",
   },
   {
     id: 6,
     question: "Do you ship internationally?",
     answer:
-      "Yes, we ship to many countries around the world. Shipping rates and delivery times vary depending on the destination. For more information, please visit our [Shipping Information](link to shipping information) page.",
+      "Yes, we ship to many countries around the world. Shipping rates and delivery times vary depending on the destination. For more information, please visit our Shipping Policy page.",
   },
   {
     id: 7,

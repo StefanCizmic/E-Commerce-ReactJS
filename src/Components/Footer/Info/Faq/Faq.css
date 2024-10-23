@@ -1,13 +1,28 @@
-.faq {
-  height: 80vh;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
 .faqs {
+  font-family: "Roboto Condensed", sans-serif;
   width: 100%;
-  border: 2px solid black;
+  padding: 30px;
 }
 
-.faqItem:hover {
+.faqs h1 {
+  text-align: center;
+  margin: 10px 0px 25px 0px;
+  font-weight: 500;
+  color: var(--color-orange);
+}
+
+.faq {
+  margin: 20px;
+  padding: 15px;
+  font-size: 20px;
+  border-bottom: 1.5px solid grey;
+}
+
+/* .faq:hover {
   cursor: pointer;
+} */
+
+.faqQuestion {
+  font-style: italic;
+  font-weight: 600;
 }

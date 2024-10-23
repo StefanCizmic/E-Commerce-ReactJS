@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Knewave&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --color-black: #292929;
-  --color-orange: #f89b1d;
   --color-white: #f5f5dc;
+  --color-green: #79C8C2;
+  --buttons-color: #47aea7;
 }
 
 * {
@@ -13,10 +13,10 @@
   box-sizing: border-box;
 }
 
-.bckg {
-  background-color: var(--color-white);
+body {
+  font-family: "Playfair Display", serif;
 }
 
-.app {
+.content {
   padding: 0px 45px;
 }

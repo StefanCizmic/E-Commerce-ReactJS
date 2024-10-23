@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const [stickyClass, setStickyClass] = useState("relative");
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 45
-        ? setStickyClass("fixed")
-        : setStickyClass("relative");
-    });
-  }, []);
-
   return (
     <nav>
       <div className="upperNav">
-        <Link to="/">
-          <p className="logo">freaky's</p>
-        </Link>
+        <div className="search-cont">
+          <span>
+            <FontAwesomeIcon className="search-icon" icon={faSearch} />
+            <input type="text" placeholder="find records"></input>
+          </span>
+          <button>search</button>
+        </div>
         <div>
-          <input type="text" placeholder="search"></input>
+          <Link to="/">
+            <p className="store-name">Harmony Records</p>
+          </Link>
+        </div>
+        <div className="user-cart-cont">
+          <span>
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+          <span>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </span>
         </div>
       </div>
-      <div className={`bottomNav ${stickyClass}`}>
+      <div className="bottomNav">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -36,6 +44,12 @@ export const Navbar = () => {
           </li>
           <li>
             <Link to="/club">Club</Link>
+          </li>
+          <li>
+            <Link to="/faq">About</Link>
+          </li>
+          <li>
+            <Link to="/shippingpolicy">Shipping</Link>
           </li>
         </ul>
       </div>

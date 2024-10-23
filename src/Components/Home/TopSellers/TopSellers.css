@@ -1,5 +1,5 @@
 .topSellers {
-  background-color: var(--color-orange);
+  background-color: #e43d12;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,4 +51,10 @@
 .topFiveData {
   margin-top: 5px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .topRecords {
+    display: block;
+  }
 }

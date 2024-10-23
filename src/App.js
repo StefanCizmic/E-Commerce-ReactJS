@@ -15,9 +15,9 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="bckg">
+    <div>
       <Navbar />
-      <div className="app">
+      <div className="content">
         <SkeletonTheme baseColor="#313131" highlightColor="#525252">
           <Routes>
             <Route path="/" element={<Home />}></Route>
