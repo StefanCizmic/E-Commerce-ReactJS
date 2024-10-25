@@ -1,0 +1,106 @@
+nav {
+  height: 130px;
+  display: grid;
+  grid-template-rows: 1fr 0.6fr;
+}
+
+.upper-nav,
+.bottom-nav {
+  padding: 0px 50px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.upper-nav > div {
+  flex: 1;
+}
+
+.search-cont span {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.search-cont .search-icon {
+  margin-right: 5px;
+}
+
+.search-cont input {
+  max-width: 200px;
+  font-family: "Playfair Display", serif;
+  border: 0px;
+  outline: 0px;
+}
+
+.search-cont button {
+  margin-left: 4px;
+  background-color: var(--buttons-color);
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  color: #fff;
+  padding: 4px 24px;
+  border: 0px;
+  border-radius: 4px;
+  transition: background-color 0.13s ease-in;
+}
+
+.search-cont button:hover {
+  cursor: pointer;
+  background-color: var(--color-green);
+}
+
+.upper-nav .store-name {
+  font-size: 20px;
+  font-weight: 450;
+  text-align: center;
+}
+
+.user-cart-cont {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.user-cart-cont span {
+  color: var(--color-black);
+  transition: color 0.13s ease-in;
+}
+
+.user-cart-cont span:hover {
+  cursor: pointer;
+  color: var(--color-green);
+}
+
+.bottom-nav {
+  justify-content: center;
+}
+
+.bottom-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.bottom-nav ul li {
+  margin: 13px;
+  font-size: 14px;
+}
+
+.upper-nav a,
+.bottom-nav a {
+  text-decoration: none;
+  color: var(--color-black);
+  transition: color 0.13s ease-in;
+}
+
+.bottom-nav a:hover {
+  color: var(--color-green);
+}
+
+.responsive-menu-bars {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .responsive-menu-bars {
+    display: block;
+  }
+}
