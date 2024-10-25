@@ -4,15 +4,15 @@ nav {
   grid-template-rows: 1fr 0.6fr;
 }
 
-.upperNav,
-.bottomNav {
+.upper-nav,
+.bottom-nav {
   padding: 0px 50px;
   border-bottom: 1px solid black;
   display: flex;
   align-items: center;
 }
 
-.upperNav > div {
+.upper-nav > div {
   flex: 1;
 }
 
@@ -25,7 +25,7 @@ nav {
 }
 
 .search-cont input {
-  width: 200px;
+  max-width: 200px;
   font-family: "Playfair Display", serif;
   border: 0px;
   outline: 0px;
@@ -48,7 +48,7 @@ nav {
   background-color: var(--color-green);
 }
 
-.upperNav .store-name {
+.upper-nav .store-name {
   font-size: 20px;
   font-weight: 450;
   text-align: center;
@@ -70,27 +70,37 @@ nav {
   color: var(--color-green);
 }
 
-.bottomNav {
+.bottom-nav {
   justify-content: center;
 }
 
-.bottomNav ul {
+.bottom-nav ul {
   display: flex;
   list-style-type: none;
 }
 
-.bottomNav ul li {
+.bottom-nav ul li {
   margin: 13px;
   font-size: 14px;
 }
 
-.upperNav a,
-.bottomNav a {
+.upper-nav a,
+.bottom-nav a {
   text-decoration: none;
   color: var(--color-black);
   transition: color 0.13s ease-in;
 }
 
-.bottomNav a:hover {
+.bottom-nav a:hover {
   color: var(--color-green);
+}
+
+.responsive-menu-bars {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .responsive-menu-bars {
+    display: block;
+  }
 }

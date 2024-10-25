@@ -1,19 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUser, faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import "./Navbar.css";
 
 export const Navbar = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => () => {
+    setIsDrawerOpen(open);
+  };
+
+  const drawerContent = (
+    <List>
+      {['Home', 'Shop', 'Newsteller', 'Club', 'About', 'Shipping'].map((text) => (
+        <ListItem button key={text} onClick={toggleDrawer(false)}>
+          <Link to={`/${text.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ListItemText primary={text} />
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+
   return (
     <nav>
-      <div className="upperNav">
+      <Drawer
+        anchor="left"
+        open={isDrawerOpen}
+        onClose={toggleDrawer(false)}
+        sx={{ '& .MuiDrawer-paper': { width: '250px', backgroundColor: '#f5f5f5', paddingTop: '20px' } }}
+      >
+        {drawerContent}
+      </Drawer>
+      <div className="upper-nav">
         <div className="search-cont">
           <span>
             <FontAwesomeIcon className="search-icon" icon={faSearch} />
-            <input type="text" placeholder="find records"></input>
+            <input type="text" placeholder="find records" />
           </span>
           <button>search</button>
         </div>
@@ -29,9 +57,13 @@ export const Navbar = () => {
           <span>
             <FontAwesomeIcon icon={faCartShopping} />
           </span>
+          <span className="responsive-menu-bars" onClick={toggleDrawer(true)}>
+            <FontAwesomeIcon icon={faBars} />
+          </span>
         </div>
       </div>
-      <div className="bottomNav">
+
+      <div className='bottom-nav'>
         <ul>
           <li>
             <Link to="/">Home</Link>
