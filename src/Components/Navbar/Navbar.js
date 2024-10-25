@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+<<<<<<< HEAD
 import { faSearch, faUser, faCartShopping, faBars, faRecordVinyl } from "@fortawesome/free-solid-svg-icons";
+=======
+import { faSearch, faUser, faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
+>>>>>>> d4ec464bb09376c927c6f2c2f14f24e81833ca97
 import { Link } from "react-router-dom";
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -47,7 +51,11 @@ export const Navbar = () => {
         </div>
         <div>
           <Link to="/">
+<<<<<<< HEAD
             <p className="store-name">Harmony Records <FontAwesomeIcon className="search-icon" icon={faRecordVinyl} /></p>
+=======
+            <p className="store-name">Harmony Records</p>
+>>>>>>> d4ec464bb09376c927c6f2c2f14f24e81833ca97
           </Link>
         </div>
         <div className="user-cart-cont">
