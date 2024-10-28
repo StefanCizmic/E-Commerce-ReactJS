@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getRecords } from "../../../Util/Fetch/getRecords";
 import { CardSkeleton } from "../../CardSkeleton/CardSkeleton";
-import "./SuggestedTwenty.css";
+import "./Recommended.css";
 
-export const SuggestedTwenty = () => {
+export const Recommended = () => {
   const [suggestedTwenty, setSuggestedTwenty] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 

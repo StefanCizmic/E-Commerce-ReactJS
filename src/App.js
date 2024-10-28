@@ -1,5 +1,7 @@
 import React from "react";
 import { Navbar } from "./Components/Navbar/Navbar";
+import { Login } from './Components/Navbar/Login/Login';
+import { Cart } from './Components/Navbar/Cart/Cart';
 import { Home } from "./Components/Home/Home";
 import { Shop } from "./Components/Shop/Shop";
 import { Newsteller } from "./Components/Newsteller/Newsteller";
@@ -20,7 +22,7 @@ const App = () => {
       <div className="content">
         <SkeletonTheme baseColor="#313131" highlightColor="#525252">
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/newsteller" element={<Newsteller />}></Route>
             <Route path="/club" element={<Club />}></Route>
@@ -28,9 +30,11 @@ const App = () => {
             <Route path="/contactus" element={<ContactUs />}></Route>
             <Route path="/shippingpolicy" element={<ShippingPolicy />}></Route>
             <Route path="/termsofservice" element={<TermsOfService />}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+            <Route path="cart" element={<Cart/>}></Route>
           </Routes>
         </SkeletonTheme>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

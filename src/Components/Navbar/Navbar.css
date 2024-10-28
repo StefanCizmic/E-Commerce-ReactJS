@@ -1,7 +1,9 @@
-nav {
-  height: 130px;
-  display: grid;
-  grid-template-rows: 1fr 0.6fr;
+.upper-nav {
+  height: 75px;
+}
+
+.bottom-nav {
+  height: 45px;
 }
 
 .upper-nav,
@@ -16,39 +18,50 @@ nav {
   flex: 1;
 }
 
-.search-cont span {
+.search-content {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+.search-form {
+  display: flex;
+  flex: 1;
   border-bottom: 2px solid var(--color-black);
 }
 
-.search-cont .search-icon {
+.search-form .search-icon {
   margin-right: 5px;
 }
 
-.search-cont input {
-  max-width: 200px;
+.search-form input {
+  max-width: 100%;
   font-family: "Playfair Display", serif;
-  border: 0px;
-  outline: 0px;
+  border: 0;
+  outline: 0;
+  flex: 1;
+  min-width: 0;
 }
 
-.search-cont button {
+.search-content button {
   margin-left: 4px;
   background-color: var(--buttons-color);
   font-family: "Playfair Display", serif;
   font-size: 12px;
   color: #fff;
   padding: 4px 24px;
-  border: 0px;
+  border: 0;
   border-radius: 4px;
   transition: background-color 0.13s ease-in;
+  flex-shrink: 0;
 }
 
-.search-cont button:hover {
+.search-content button:hover {
   cursor: pointer;
-  background-color: var(--color-green);
+  background-color: #5bc4b6;
 }
 
-.upper-nav .store-name {
+.store-name {
   font-size: 20px;
   font-weight: 450;
   text-align: center;
@@ -99,8 +112,56 @@ nav {
   display: none;
 }
 
-@media (max-width: 1000px) {
+.x-mark {
+  font-size: 22px;
+  display: flex;
+  justify-self: flex-end;
+}
+
+.x-mark:hover {
+  cursor: pointer;
+}
+
+.drawer-content li {
+  margin: 15px;
+  list-style-type: none;
+}
+
+.drawer-content a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.drawer-content a:hover {
+  color: var(--color-green);
+}
+
+@media (max-width: 1024px) {
+  .bottom-nav {
+    display: none;
+  }
   .responsive-menu-bars {
     display: block;
+  }
+  .search {
+    display: none;
+  }
+  .store-name {
+    text-align: start;
+  }
+}
+
+@media (max-width: 800px) {
+  .search-content span, .user-cart-cont {
+    font-size: 12px;
+  }
+  .search-content input {
+    font-size: 11px;
+  }
+  .search-content button {
+    font-size: 10px;
+  }
+  .store-name {
+    font-size: 16px;
   }
 }

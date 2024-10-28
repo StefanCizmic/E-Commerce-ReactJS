@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faUser, faCartShopping, faBars, faRecordVinyl } from "@fortawesome/free-solid-svg-icons";
-import { faSearch, faUser, faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faUser,
+  faCartShopping,
+  faBars,
+  faRecordVinyl,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
+import Drawer from "@mui/material/Drawer";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -17,59 +20,95 @@ export const Navbar = () => {
   };
 
   const drawerContent = (
-    <List>
-      {['Home', 'Shop', 'Newsteller', 'Club', 'About', 'Shipping'].map((text) => (
-        <ListItem button key={text} onClick={toggleDrawer(false)}>
-          <Link to={`/${text.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <ListItemText primary={text} />
-          </Link>
-        </ListItem>
-      ))}
-    </List>
+    <div>
+      <FontAwesomeIcon
+        className="x-mark"
+        onClick={toggleDrawer(false)}
+        icon={faXmark}
+      />
+      <span className="search-form" style={{ marginTop: "5px" }}>
+        <FontAwesomeIcon className="search-icon" icon={faSearch} />
+        <input
+          type="text"
+          placeholder="find records"
+          style={{ backgroundColor: "#f5f5f5" }}
+        />
+      </span>
+      <ul className="drawer-content">
+        {["Home", "Shop", "Newsteller", "Club", "About", "Shipping"].map(
+          (item) => (
+            <li key={item} onClick={toggleDrawer(false)}>
+              <Link to={`/${item.toLowerCase()}`}>{item}</Link>
+            </li>
+          )
+        )}
+      </ul>
+    </div>
   );
 
   return (
     <nav>
-      <p>new</p>
       <Drawer
         anchor="left"
         open={isDrawerOpen}
         onClose={toggleDrawer(false)}
-        sx={{ '& .MuiDrawer-paper': { width: '250px', backgroundColor: '#f5f5f5', paddingTop: '20px' } }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            width: {
+              xs: "250px",
+              sm: "250px",
+              md: "350px",
+            },
+            fontSize: {
+              xs: "14px",
+              sm: "16px",
+              md: "16px",
+            },
+            backgroundColor: "#f5f5f5",
+            padding: "20px 20px",
+          },
+        }}
       >
         {drawerContent}
       </Drawer>
       <div className="upper-nav">
-        <div className="search-cont">
-          <span>
-            <FontAwesomeIcon className="search-icon" icon={faSearch} />
-            <input type="text" placeholder="find records" />
-          </span>
-          <button>search</button>
+        <div className="search">
+          <div className="search-content">
+            <span className="search-form">
+              <FontAwesomeIcon className="search-icon" icon={faSearch} />
+              <input type="text" placeholder="find records" />
+            </span>
+            <button>search</button>
+          </div>
         </div>
-        <div>
+        <div className="store-name-cont">
           <Link to="/">
-            <p className="store-name">Harmony Records <FontAwesomeIcon className="search-icon" icon={faRecordVinyl} /></p>
-            <p className="store-name">Harmony Records</p>
+            <p className="store-name">
+              Harmony Records{" "}
+              <FontAwesomeIcon className="search-icon" icon={faRecordVinyl} />
+            </p>
           </Link>
         </div>
         <div className="user-cart-cont">
-          <span>
-            <FontAwesomeIcon icon={faUser} />
-          </span>
-          <span>
-            <FontAwesomeIcon icon={faCartShopping} />
-          </span>
+          <Link to="/login">
+            <span>
+              <FontAwesomeIcon icon={faUser} />
+            </span>
+          </Link>
+          <Link to="/cart">
+            <span>
+              <FontAwesomeIcon icon={faCartShopping} />
+            </span>
+          </Link>
           <span className="responsive-menu-bars" onClick={toggleDrawer(true)}>
             <FontAwesomeIcon icon={faBars} />
           </span>
         </div>
       </div>
-
-      <div className='bottom-nav'>
+      <div className="bottom-nav">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/shop">Shop</Link>
@@ -81,7 +120,7 @@ export const Navbar = () => {
             <Link to="/club">Club</Link>
           </li>
           <li>
-            <Link to="/faq">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/shippingpolicy">Shipping</Link>
