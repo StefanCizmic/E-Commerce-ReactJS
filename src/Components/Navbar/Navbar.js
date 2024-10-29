@@ -9,6 +9,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { SignIn } from "./User/SignIn/SignIn";
 import Drawer from "@mui/material/Drawer";
 import "./Navbar.css";
 
@@ -90,7 +91,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="user-cart-cont">
-          <Link to="/login">
+          <Link to="/user">
             <span>
               <FontAwesomeIcon icon={faUser} />
             </span>

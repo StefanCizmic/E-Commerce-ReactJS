@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "./Components/Navbar/Navbar";
-import { Login } from './Components/Navbar/Login/Login';
+import { User } from './Components/Navbar/User/User';
 import { Cart } from './Components/Navbar/Cart/Cart';
 import { Home } from "./Components/Home/Home";
 import { Shop } from "./Components/Shop/Shop";
@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/contactus" element={<ContactUs />}></Route>
             <Route path="/shippingpolicy" element={<ShippingPolicy />}></Route>
             <Route path="/termsofservice" element={<TermsOfService />}></Route>
-            <Route path="/login" element={<Login/>}></Route>
+            <Route path="/user" element={<User/>}></Route>
             <Route path="cart" element={<Cart/>}></Route>
           </Routes>
         </SkeletonTheme>

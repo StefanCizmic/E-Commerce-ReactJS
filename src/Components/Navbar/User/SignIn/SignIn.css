@@ -1,0 +1,17 @@
+.sign-in {
+   
+}
+
+.password-field p {
+    font-size: 12.5px;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.sign-up-span {
+    color: #007BFF;
+}
+
+.sign-up-span:hover {
+    cursor: pointer;
+}
