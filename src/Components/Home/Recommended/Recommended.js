@@ -1,53 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { Component } from "react";
 import { getRecords } from "../../../Util/Fetch/getRecords";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import { CardSkeleton } from "../../CardSkeleton/CardSkeleton";
 import "./Recommended.css";
 
-export const Recommended = () => {
-  const [suggestedTwenty, setSuggestedTwenty] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+export const Recommended = (props) => {
+  const { deviceType } = props; 
 
-  useEffect(() => {
-    const fetchSuggestedTwenty = async () => {
-      const data = await getRecords("suggestedTwenty");
-      setSuggestedTwenty(data);
-      setIsLoading(false);
-    };
-    fetchSuggestedTwenty();
-  }, []);
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
-    <div className="suggested">
-      <div className="suggestedInner">
-        <div className="suggestedText">
-          <div>
-            <h2>Freaky's 20</h2>
-            <p>
-              In our store, you'll find a carefully chosen selection of over 200
-              vinyl records spanning various genres and eras. Please feel free
-              to take a look at the featured records we've selected just for
-              you.
-            </p>
-          </div>
-        </div>
-        <div className="suggestedRecords">
-          {isLoading ? (
-            <CardSkeleton cards={20} />
-          ) : (
-            suggestedTwenty?.map((item) => (
-              <div className="singleRecord" key={item.id}>
-                <div className="singleRecordImg" data-content={item.price}>
-                  <img src={item.image} alt={item.title} />
-                </div>
-                <div className="singleRecordText">
-                  <h4>{item.title}</h4>
-                  <p>{item.artist}</p>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-      </div>
+    <div className="recommended">
+    <Carousel
+      swipeable={false}
+      draggable={false}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} 
+      infinite={true}
+      autoPlay={deviceType !== "mobile"}
+      autoPlaySpeed={1000}
+      keyBoardControl={true}
+      customTransition="all .5"
+      transitionDuration={500}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+    </Carousel>
     </div>
   );
 };
