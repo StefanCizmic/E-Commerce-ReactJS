@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import "./SignIn.css";
 
-export const SignIn = ({setLogin}) => {
+export const SignIn = ({ setLogin }) => {
   return (
     <form className="sign-in">
       <h2>Sign In</h2>
@@ -12,8 +12,14 @@ export const SignIn = ({setLogin}) => {
           label="Email"
           variant="outlined"
           sx={{
-            width: "300px",
-            fontSize: "5px",
+            width: {
+              xs: "100%",
+              sm: "300px",
+            },
+            fontSize: {
+              xs: "12px",
+              sm: "16px",
+            },
             "& .MuiInputBase-root": {
               height: "40px",
             },
@@ -25,20 +31,41 @@ export const SignIn = ({setLogin}) => {
           label="Password"
           variant="outlined"
           sx={{
-            width: "300px",
+            width: {
+              xs: "100%",
+              sm: "300px",
+            },
+            fontSize: {
+              xs: "12px",
+              sm: "16px",
+            },
             "& .MuiInputBase-root": {
               height: "40px",
             },
           }}
         />
-        <p>Forgot password?</p>
+        <p className="password-forgotten">Forgot password?</p>
       </div>
-      <Button variant="contained" sx={{ width: "300px", fontFamily: "Playfair Display" }}>
+      <Button
+        variant="contained"
+        sx={{
+          width: { xs: "100%", md: "300px" },
+          fontSize: {
+            xs: "12px",
+            sm: "16px",
+          },
+          fontFamily: "Playfair Display",
+        }}
+      >
         Sign In
       </Button>
       <p>
-        Don't have an account? <span className="sign-up-span" onClick={() => setLogin(false)}>Sign up</span> for
-        free
+        Don't have an account? {""}
+        <span className="sign-up-span" onClick={() => setLogin(false)}>
+          Sign up
+        </span>{" "}
+        {""}
+        for free
       </p>
     </form>
   );

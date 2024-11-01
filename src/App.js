@@ -12,7 +12,6 @@ import { ContactUs } from "./Components/Footer/Info/ContactUs/ContactUs";
 import { ShippingPolicy } from "./Components/Footer/Info/ShippingPolicy/ShippingPolicy";
 import { TermsOfService } from "./Components/Footer/Info/TermsOfService/TermsOfService";
 import { Routes, Route } from "react-router-dom";
-import { SkeletonTheme } from "react-loading-skeleton";
 import "./App.css";
 
 const App = () => {
@@ -20,9 +19,8 @@ const App = () => {
     <div>
       <Navbar />
       <div className="content">
-        <SkeletonTheme baseColor="#313131" highlightColor="#525252">
           <Routes>
-            <Route path="/home" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/newsteller" element={<Newsteller />}></Route>
             <Route path="/club" element={<Club />}></Route>
@@ -33,7 +31,6 @@ const App = () => {
             <Route path="/user" element={<User/>}></Route>
             <Route path="cart" element={<Cart/>}></Route>
           </Routes>
-        </SkeletonTheme>
         {/* <Footer /> */}
       </div>
     </div>

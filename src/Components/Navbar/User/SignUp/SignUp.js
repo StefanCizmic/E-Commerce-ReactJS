@@ -12,8 +12,10 @@ export const SignUp = ({ setLogin }) => {
           label="Enter username"
           variant="outlined"
           sx={{
-            width: "300px",
-            fontSize: "5px",
+            width: {
+              xs: "100%",
+              sm: "300px",
+            },
             "& .MuiInputBase-root": {
               height: "40px",
             },
@@ -25,7 +27,10 @@ export const SignUp = ({ setLogin }) => {
           label="Enter email"
           variant="outlined"
           sx={{
-            width: "300px",
+            width: {
+              xs: "100%",
+              sm: "300px",
+            },
             "& .MuiInputBase-root": {
               height: "40px",
             },
@@ -37,19 +42,10 @@ export const SignUp = ({ setLogin }) => {
           label="Enter password"
           variant="outlined"
           sx={{
-            width: "300px",
-            "& .MuiInputBase-root": {
-              height: "40px",
+            width: {
+              xs: "100%",
+              sm: "300px",
             },
-          }}
-        />
-      </div>
-      <div className="confirm-password">
-        <TextField
-          label="Confirm password"
-          variant="outlined"
-          sx={{
-            width: "300px",
             "& .MuiInputBase-root": {
               height: "40px",
             },
@@ -58,7 +54,14 @@ export const SignUp = ({ setLogin }) => {
       </div>
       <Button
         variant="contained"
-        sx={{ width: "300px", fontFamily: "Playfair Display" }}
+        sx={{
+          width: { xs: "100%", md: "300px" },
+          fontSize: {
+            xs: "12px",
+            sm: "16px",
+          },
+          fontFamily: "Playfair Display",
+        }}
         onClick={() => setLogin(true)}
       >
         Submit

@@ -9,7 +9,6 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { SignIn } from "./User/SignIn/SignIn";
 import Drawer from "@mui/material/Drawer";
 import "./Navbar.css";
 
@@ -109,7 +108,7 @@ export const Navbar = () => {
       <div className="bottom-nav">
         <ul>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/shop">Shop</Link>
