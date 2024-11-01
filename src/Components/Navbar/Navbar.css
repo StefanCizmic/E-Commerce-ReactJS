@@ -152,7 +152,8 @@
 }
 
 @media (max-width: 800px) {
-  .search-content span, .user-cart-cont {
+  .search-content span,
+  .user-cart-cont {
     font-size: 12px;
   }
   .search-content input {

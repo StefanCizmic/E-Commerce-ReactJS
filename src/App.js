@@ -9,7 +9,7 @@ import { Club } from "./Components/Club/Club";
 import { Footer } from "./Components/Footer/Footer";
 import { Faq } from "./Components/Footer/Info/Faq/Faq";
 import { ContactUs } from "./Components/Footer/Info/ContactUs/ContactUs";
-import { ShippingPolicy } from "./Components/Footer/Info/ShippingPolicy/ShippingPolicy";
+import { ShippingPolicy } from "./Components/Navbar/Navigation/ShippingPolicy/ShippingPolicy";
 import { TermsOfService } from "./Components/Footer/Info/TermsOfService/TermsOfService";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
