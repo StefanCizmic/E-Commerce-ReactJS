@@ -14,11 +14,9 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
   const toggleDrawer = (open) => () => {
     setIsDrawerOpen(open);
   };
-
   const drawerContent = (
     <div>
       <FontAwesomeIcon
@@ -45,7 +43,6 @@ export const Navbar = () => {
       </ul>
     </div>
   );
-
   return (
     <nav>
       <Drawer
@@ -85,10 +82,7 @@ export const Navbar = () => {
           <Link to="/">
             <p className="store-name">
               Harmony Records{" "}
-              <FontAwesomeIcon
-                className="store-icon"
-                icon={faRecordVinyl}
-              />
+              <FontAwesomeIcon className="store-icon" icon={faRecordVinyl} />
             </p>
           </Link>
         </div>

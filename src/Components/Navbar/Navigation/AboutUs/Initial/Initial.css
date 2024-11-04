@@ -1,0 +1,33 @@
+.about-us-initial {
+  height: 100%;
+  background-image: url("../../../../../Images/store\ 2.jfif");
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.find-out-more {
+  text-align: end;
+  transition: transform 0.4s;
+  transform-origin: right center;
+}
+
+.find-out-more:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+.about-us-initial .text {
+  height: 100vh;
+  line-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-us-initial .text h1 {
+  font-size: 55px;
+}
+
+.about-us-initiial .text p {
+  font-size: 18px;
+}

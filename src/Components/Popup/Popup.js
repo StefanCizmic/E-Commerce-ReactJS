@@ -11,7 +11,7 @@ export const Popup = () => {
   useEffect(() => {
     setTimeout(() => {
       handleOpen();
-    }, 500);
+    }, 750);
   }, []);
   return (
     <div className="modal">
@@ -83,3 +83,4 @@ export const Popup = () => {
     </div>
   );
 };
+
