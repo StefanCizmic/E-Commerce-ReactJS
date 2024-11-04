@@ -4,29 +4,46 @@
   align-items: center;
   flex-direction: column;
   gap: 45px;
-  padding: 40px 80px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .shipping-policy div {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 16.5px;
-  border-bottom: 2px solid var(--color-black);
+  font-size: 15.5px;
+  border-bottom: 2.5px solid var(--color-black);
   padding-bottom: 25px;
+}
+
+.shipping-policy div:last-child {
+  border-bottom: none;
+}
+
+.contact-via-mail {
+  color: #007bff;
 }
 
 .contact-via-mail:hover {
   cursor: pointer;
-  color: #007bff;
+  color: #dc143c;
+}
+
+@media (min-width: 1200px) {
+  .shipping-policy {
+    padding: 45px 300px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1199px) {
+  .shipping-policy {
+    padding: 45px 100px;
+  }
 }
 
 @media (max-width: 600px) {
   .shipping-policy {
     font-size: 12px;
+    padding: 45px 10px;
   }
   .shipping-policy div {
     font-size: 14.5px;

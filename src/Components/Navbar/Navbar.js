@@ -85,7 +85,10 @@ export const Navbar = () => {
           <Link to="/">
             <p className="store-name">
               Harmony Records{" "}
-              <FontAwesomeIcon className="search-icon" icon={faRecordVinyl} />
+              <FontAwesomeIcon
+                className="store-icon"
+                icon={faRecordVinyl}
+              />
             </p>
           </Link>
         </div>
@@ -120,10 +123,10 @@ export const Navbar = () => {
             <Link to="/club">Club</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">About us</Link>
           </li>
           <li>
-            <Link to="/shippingpolicy">Shipping</Link>
+            <Link to="/shipping">Shipping</Link>
           </li>
         </ul>
       </div>

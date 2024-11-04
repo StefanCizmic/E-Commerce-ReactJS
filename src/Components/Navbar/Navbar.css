@@ -151,18 +151,21 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (min-width: 401px) and (max-width: 800px) {
   .search-content span,
   .user-cart-cont {
     font-size: 12px;
   }
-  .search-content input {
-    font-size: 11px;
-  }
-  .search-content button {
-    font-size: 10px;
-  }
   .store-name {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .user-cart-cont {
+    font-size: 11px;
+  }
+  .store-name {
+    font-size: 12.5px;
   }
 }

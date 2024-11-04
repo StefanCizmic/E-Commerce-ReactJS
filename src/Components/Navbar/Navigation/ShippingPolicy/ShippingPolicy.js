@@ -119,9 +119,14 @@ export const ShippingPolicy = () => {
           until the package is officially declared lost.
         </p>
         <p>
-          For issues with any other shipping providers, please contact us at
-          {" "}
-          <span className="contact-via-mail">[harmonyrecords@gmail.com]</span>.
+          For issues with any other shipping providers, please contact us at{" "}
+          <span
+            className="contact-via-mail"
+            onClick={() => (window.location = "mailto:harmonyrecords@gmail.co")}
+          >
+            [harmonyrecords@gmail.com]
+          </span>
+          .
         </p>
       </div>
     </div>

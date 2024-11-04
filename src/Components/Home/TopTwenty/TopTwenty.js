@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { getRecords } from "../../../Util/Fetch/getRecords";
 import { CardSkeleton } from "../../CardSkeleton/CardSkeleton";
 import "./TopTwenty.css";
 
@@ -7,14 +6,14 @@ export const TopTwenty = () => {
   const [suggestedTwenty, setSuggestedTwenty] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchSuggestedTwenty = async () => {
-      const data = await getRecords("suggestedTwenty");
-      setSuggestedTwenty(data);
-      setIsLoading(false);
-    };
-    fetchSuggestedTwenty();
-  }, []);
+  // useEffect(() => {
+  //   const fetchSuggestedTwenty = async () => {
+  //     const data = await getRecords("suggestedTwenty");
+  //     setSuggestedTwenty(data);
+  //     setIsLoading(false);
+  //   };
+  //   fetchSuggestedTwenty();
+  // }, []);
 
   return (
     <div className="suggested">

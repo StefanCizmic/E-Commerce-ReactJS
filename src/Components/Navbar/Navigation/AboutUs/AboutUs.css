@@ -1,0 +1,23 @@
+.about-us {
+  height: 100%;
+}
+
+.about-us .background {
+  height: 100vh;
+  background-image: url("../../../../Images/store 2.jfif");
+  background-position: bottom;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.about-us .background h1 {
+  font-size: 55px;
+}
+
+.about-us .background p {
+  font-size: 18px;
+}

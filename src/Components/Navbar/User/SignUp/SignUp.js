@@ -53,14 +53,16 @@ export const SignUp = ({ setLogin }) => {
         />
       </div>
       <Button
+        className="sign-up-button"
         variant="contained"
         sx={{
-          width: { xs: "100%", md: "300px" },
+          width: { xs: "100%", sm: "300px" },
           fontSize: {
             xs: "12px",
             sm: "16px",
           },
           fontFamily: "Playfair Display",
+          marginTop: "20px"
         }}
         onClick={() => setLogin(true)}
       >

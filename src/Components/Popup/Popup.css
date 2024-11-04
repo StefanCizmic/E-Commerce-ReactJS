@@ -1,0 +1,10 @@
+.close-modal {
+  display: flex;
+  justify-self: end;
+  font-size: 20px;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  color: var(--color-green);
+}

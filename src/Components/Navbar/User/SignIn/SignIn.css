@@ -1,3 +1,5 @@
+
+
 .password-field p {
   font-size: 12.5px;
   text-align: end;
@@ -19,7 +21,7 @@
 }
 
 @media (max-width: 600px) {
-    .sign-in {
-        font-size: 12.5px;
-    }
+  .sign-in {
+    font-size: 12.5px;
+  }
 }

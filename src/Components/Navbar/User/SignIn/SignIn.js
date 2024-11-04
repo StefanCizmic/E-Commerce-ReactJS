@@ -12,6 +12,7 @@ export const SignIn = ({ setLogin }) => {
           label="Email"
           variant="outlined"
           sx={{
+            '.MuiInputBase-input': { fontSize: '0.5rem' },
             width: {
               xs: "100%",
               sm: "300px",
@@ -64,7 +65,6 @@ export const SignIn = ({ setLogin }) => {
         <span className="sign-up-span" onClick={() => setLogin(false)}>
           Sign up
         </span>{" "}
-        {""}
         for free
       </p>
     </form>
